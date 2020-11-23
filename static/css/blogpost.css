@@ -1,0 +1,91 @@
+/*.js-tilt{*/
+/*    will-change: transform;*/
+/*    transform: perspective(300px) rotateX(0deg) rotateY(0deg);*/
+/*}*/
+
+h1{
+    font-size:  8vh;
+    position: absolute;
+    margin: 25px 30px;
+    margin-left: 10vw;
+    z-index: -100;
+    color: #000;
+}
+
+#post-container{
+    transform: translateY(10vh);
+}
+
+.img.img-rounded{
+    position: relative;
+    left: -150%;
+    transform: translateY(-3vh);
+    border-radius: 15px;
+    width: inherit;
+    box-shadow: 10px 10px 10px 0 rgba(0,0,0,.6);
+
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.row:first-child{
+    margin: 0;
+}
+
+.container{
+    background: #f0f0f0bf;
+    min-height: 85vh;
+    padding-bottom: 25px;
+    text-align: justify;
+    border-radius: 20px;
+}
+
+.tag{
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+#nsfw:hover, #horror:hover, #sad:hover, #happy:hover, #love:hover, #cute:hover{
+    opacity: .85;
+    transform: translateY(2px);
+}
+
+#nsfw{
+    background-color: rgb(175, 17, 28);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}
+
+#horror{
+     background-color: rgb(77, 0, 0);
+     border: 2px solid rgba(255, 255, 255, .3);
+     color: #e2e2e2;
+}
+
+#sad{
+    background-color: rgb(42, 59, 144);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}
+
+#happy{
+    background-color: rgb(255, 231, 0);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: black;
+}
+
+#love{
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}
+
+#cute{
+    background-color: rgb(255, 105, 180);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}

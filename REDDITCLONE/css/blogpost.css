@@ -1,0 +1,44 @@
+.js-tilt{
+    will-change: transform;
+    transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+}
+
+h1{
+    font-size:  8vh;
+    position: absolute;
+    margin: 25px 30px;
+    margin-left: 10vw;
+    z-index: -100;
+    color: #000;
+}
+
+#post-container{
+    transform: translateY(10vh);
+}
+
+.img.img-rounded{
+    position: relative;
+    left: -150%;
+    transform: translateY(-3vh);
+    border-radius: 15px;
+    width: inherit;
+    box-shadow: 10px 10px 10px 0 rgba(0,0,0,.6);
+
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.row:first-child{
+    margin: 0;
+}
+
+.container{
+    background: #f0f0f0bf;
+    min-height: 85vh;
+    padding-bottom: 25px;
+    text-align: justify;
+    border-radius: 20px;
+}

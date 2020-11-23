@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}{{ post.postTitle }}{% endblock %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/blogpost.css' %}">{% endblock %}
+{% block body %}
+
+        <h1>DEATH</h1>
+
+        <div class="container" id="post-container">
+            <div class="row">
+                <div class="col-12" draggable="false" style="position: relative">
+                    <img src="{{ post.image.url }}" class="img img-rounded" title="planet">
+
+                </div>
+                <div class="col-12 right-text">
+                    <div>
+                        <h3>{{ post.postTitle }}</h3>
+                        {% for postTag in postTags %}
+                            {% if postTag.tagID.tagName == 'Love' %}
+                                <span class="tag p-1" id="love">{{ postTag.tagID.tagName }}</span>
+                            {% elif postTag.tagID.tagName == 'Horror' %}
+                                <span class="tag p-1" id="horror">{{ postTag.tagID.tagName }}</span>
+                            {% elif postTag.tagID.tagName == 'Cute' %}
+                                <span class="tag p-1" id="cute">{{ postTag.tagID.tagName }}</span>
+                            {% elif postTag.tagID.tagName == 'Happy' %}
+                                <span class="tag p-1" id="happy">{{ postTag.tagID.tagName }}</span>
+                            {% elif postTag.tagID.tagName == 'Sad' %}
+                                <span class="tag p-1" id="sad">{{ postTag.tagID.tagName }}</span>
+                            {% elif postTag.tagID.tagName == 'NSFW' %}
+                                <span class="tag p-1" id="nsfw">{{ postTag.tagID.tagName }}</span>
+                            {% endif %}
+                        {% endfor %}
+                        <span class="float-right">Blog Written By <a href="{% url 'blog:view_profile' post.owner.id %}">{{ post.owner.username }}</a></span>
+                        <hr>
+
+                    </div>
+                    <div>
+                       {{ post.content | linebreaks }}
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+
+{% block foot_script %}<script src="{% static 'js/blogpost.js' %}"></script>{% endblock %}

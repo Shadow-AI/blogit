@@ -1,0 +1,97 @@
+:root{
+    /* CSS HEX */    
+    --rich-black: #2d2d2d;
+    --navbar: #2c095d;
+    --post-info: lightpink;
+    
+    --dark-pink: #DE3F9F;
+    --dark-red: #b80c09;
+
+    --light-font: #f0f0f0;
+    --dark-font: #282828;
+    --light-gray: #cfcfcf;  
+    
+    --anim-time: 1.2s;
+    
+    --red: rgb(226, 61, 40);
+    --green: rgb(116, 195, 101);
+
+}
+
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+body {
+    background: url(../img/1046.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    background-attachment: fixed;
+}
+
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#nsfw:hover, #horror:hover, #sad:hover, #happy:hover, #love:hover, #cute:hover{
+    opacity: .85;
+    transform: translateY(2px);
+}
+
+#nsfw{
+    background-color: rgb(175, 17, 28);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}
+
+#horror{
+     background-color: rgb(77, 0, 0);
+     border: 2px solid rgba(255, 255, 255, .3);
+     color: #e2e2e2;
+}
+
+#sad{
+    background-color: rgb(42, 59, 144);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}
+
+#happy{
+    background-color: rgb(255, 231, 0);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: black;
+}
+
+#love{
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}
+
+#cute{
+    background-color: rgb(255, 105, 180);
+    border: 2px solid rgba(255, 255, 255, .3);
+    color: #e2e2e2;
+}

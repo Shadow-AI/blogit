@@ -1,0 +1,78 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}BlogIt Home{% endblock %}
+{% block head %}<link href="{% static 'css/index.css' %}" rel="stylesheet">{% endblock %}
+{% block body %}
+
+
+        <!-- Post item -->
+        <div class="all-posts">
+
+            {% for post,tags in posts.items %}
+
+                <a href="{% url 'blog:view_post' post.postID %}">
+
+                <div class="container extra-offset my-3">
+                <div class="card text-center">
+                    <div class="card-img px-2">
+                        <img src="{{ post.image.url }}" class="mx-auto mt-2">
+                    </div>
+
+                    <div class="container nested-card mx-auto">
+                        <div class="mt-2">
+                            <div class="card-tags d-none d-sm-block text-left">
+                                <h5>
+                                    {% for postTag in tags %}
+                                        {% if postTag.tagID.tagName == 'Love' %}
+                                            <span class="tag p-1" id="love">{{ postTag.tagID.tagName }}</span>
+                                        {% elif postTag.tagID.tagName == 'Horror' %}
+                                            <span class="tag p-1" id="horror">{{ postTag.tagID.tagName }}</span>
+                                        {% elif postTag.tagID.tagName == 'Cute' %}
+                                            <span class="tag p-1" id="cute">{{ postTag.tagID.tagName }}</span>
+                                        {% elif postTag.tagID.tagName == 'Happy' %}
+                                            <span class="tag p-1" id="happy">{{ postTag.tagID.tagName }}</span>
+                                        {% elif postTag.tagID.tagName == 'Sad' %}
+                                            <span class="tag p-1" id="sad">{{ postTag.tagID.tagName }}</span>
+                                        {% elif postTag.tagID.tagName == 'NSFW' %}
+                                            <span class="tag p-1" id="nsfw">{{ postTag.tagID.tagName }}</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                </h5>
+                            </div>
+                            <h3 class="card-title mt-3">{{ post.postTitle | title }}</h3>
+                            <p class="card-text">{{ post.content |truncatewords_html:20 }}</p>
+{#                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">#}
+{#                                <span>#}
+{#                                    <a href="#">#}
+{#                                        <i class="fa fa-arrow-up fa-lg"></i>#}
+{#                                    </a>#}
+{#                                    12.3K#}
+{#                                    <a href="#">#}
+{#                                        <i class="fa fa-arrow-down fa-lg"></i>#}
+{#                                    </a>#}
+{#                                </span>#}
+{##}
+{#                                <a href="#">#}
+{#                                    Comments#}
+{#                                    <i class="fa fa-comment fa-lg"></i>#}
+{#                                </a>#}
+{##}
+{#                                <a href="#">#}
+{#                                    Share#}
+{#                                    <i class="fa fa-share-alt fa-lg"></i>#}
+{#                                </a>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            {% endfor %}
+        </div>
+
+
+        <!-- Post item end-->
+
+ {% endblock %}
+{% block foot_script %}{% endblock %}

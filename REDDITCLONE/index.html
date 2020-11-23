@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Deepanshu Harshavardhan Jatin">
+
+        <title>Reddit Clone</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link href="css/root.css" rel="stylesheet">
+        <link href="css/index.css" rel=stylesheet>
+
+    </head>
+    <body>
+
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="#">
+                <img src="favicon.png" height="32px">
+                Blogit
+            </a>
+            <!--
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcollapse">
+<span class="navbar-toggler-icon"></span>
+</button>
+-->
+
+            <!--            <div class="justify-content-between">-->
+            <form class="form-inline d-none d-md-inline-block">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <!--            this is the profile icon-->
+            <!--
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+<img src="img/defa.jpg" height="32px">
+</a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item">Profile</a>
+<a class="dropdown-item">Bomba</a>
+</div>
+</div>
+-->
+
+            <!--            this is the pre login-->
+            <div>
+                <a class="btn mr-1" id="loginnav" href="login.html">Login</a>
+                <a class="btn ml-1" id="registernav" href=login.html>Register</a>
+            </div>
+
+            <!--            </div>-->
+        </nav>
+        <!-- Navbar end-->
+
+
+<!--
+        <div class="modal fade" id="authmodel">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        
+
+                        <nav class="nav nav-tabs justify-content-center" role="tablist">
+                            <a class="nav-item nav-link" data-toggle="tab" role=tab href="#login">Login</a>
+                            <a class="nav-item nav-link" data-toggle="tab" role=tab href="#register">Sign Up</a>
+                        </nav>
+                        
+                        
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="login" role=tabpanel>
+                            <div class="container">
+                                <form>
+                                    <div class="form-group row align-items-baseline">
+                                        <div class="col-3">
+                                            <label for="authusername">Username</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="text" class="form-control" id="authusername" placeholder="Enter Username">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-baseline">
+                                        <div class="col-3">
+                                            <label for="authpass">Password</label>
+                                        </div>
+                                        <div class="col">
+                                            <input type="password" class="form-control" id="authpass" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <a class="btn btn-success offset-4" id="authlogin">Login</a>
+                                        <a class="btn btn-danger offset-1" data-dismiss="modal">Cancel</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade active" id="register" role=tabpanel>
+                            <div class="container">
+                                <form>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+-->
+
+
+        <!-- Post item -->
+        <div class="all-posts">
+            <div class="container extra-offset my-3">
+                <div class="card text-center">
+                    <div class="card-img px-2">
+                        <img src="img/thot1.jpg" class="mx-auto mt-2">
+                    </div>
+
+                    <div class="container nested-card mx-auto">
+                        <div class="mt-2">
+                            <div class="card-tags d-none d-sm-block text-left">
+                                <h5>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                </h5>
+                            </div>
+                            <h3 class="card-title mt-3">Lorem Ipsum</h3>
+                            <p class="card-text">hdsjkdhsjak hds hskds dhsjd hsjdh sd</p>
+                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">
+                                <span>
+                                    <a href="#">
+                                        <i class="fa fa-arrow-up fa-lg"></i>
+                                    </a>
+                                    12.3K
+                                    <a href="#">
+                                        <i class="fa fa-arrow-down fa-lg"></i>
+                                    </a>
+                                </span>
+
+                                <a href="#">
+                                    Comments
+                                    <i class="fa fa-comment fa-lg"></i>
+                                </a>
+
+                                <a href="#">
+                                    Share
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container extra-offset my-3">
+                <div class="card text-center">
+                    <div class="card-img px-2">
+                        <img src="img/thot.jpg" class="mx-auto mt-2">
+                    </div>
+
+                    <div class="container nested-card mx-auto">
+                        <div class="mt-2">
+                            <div class="card-tags d-none d-sm-block text-left">
+                                <h5>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                </h5>
+                            </div>
+                            <h3 class="card-title mt-3">Lorem Ipsum</h3>
+                            <p class="card-text">hdsjkdhsjak hds hskds dhsjd hsjdh sd</p>
+                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">
+                                <span>
+                                    <a href="#">
+                                        <i class="fa fa-arrow-up fa-lg"></i>
+                                    </a>
+                                    12.3K
+                                    <a href="#">
+                                        <i class="fa fa-arrow-down fa-lg"></i>
+                                    </a>
+                                </span>
+
+                                <a href="#">
+                                    Comments
+                                    <i class="fa fa-comment fa-lg"></i>
+                                </a>
+
+                                <a href="#">
+                                    Share
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container extra-offset my-3">
+                <div class="card text-center">
+                    <div class="card-img px-2">
+                        <img src="img/thot2.jpg" class="mx-auto mt-2">
+                    </div>
+
+                    <div class="container nested-card mx-auto">
+                        <div class="mt-2">
+                            <div class="card-tags d-none d-sm-block text-left">
+                                <h5>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                </h5>
+                            </div>
+                            <h3 class="card-title mt-3">Lorem Ipsum</h3>
+                            <p class="card-text">hdsjkdhsjak hds hskds dhsjd hsjdh sd</p>
+                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">
+                                <span>
+                                    <a href="#">
+                                        <i class="fa fa-arrow-up fa-lg"></i>
+                                    </a>
+                                    12.3K
+                                    <a href="#">
+                                        <i class="fa fa-arrow-down fa-lg"></i>
+                                    </a>
+                                </span>
+
+                                <a href="#">
+                                    Comments
+                                    <i class="fa fa-comment fa-lg"></i>
+                                </a>
+
+                                <a href="#">
+                                    Share
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container extra-offset my-3">
+                <div class="card text-center">
+                    <div class="card-img px-2">
+                        <img src="img/thot4.jpg" class="mx-auto mt-2">
+                    </div>
+
+                    <div class="container nested-card mx-auto">
+                        <div class="mt-2">
+                            <div class="card-tags d-none d-sm-block text-left">
+                                <h5>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                </h5>
+                            </div>
+                            <h3 class="card-title mt-3">Lorem Ipsum</h3>
+                            <p class="card-text">hdsjkdhsjak hds hskds dhsjd hsjdh sd</p>
+                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">
+                                <span>
+                                    <a href="#">
+                                        <i class="fa fa-arrow-up fa-lg"></i>
+                                    </a>
+                                    12.3K
+                                    <a href="#">
+                                        <i class="fa fa-arrow-down fa-lg"></i>
+                                    </a>
+                                </span>
+
+                                <a href="#">
+                                    Comments
+                                    <i class="fa fa-comment fa-lg"></i>
+                                </a>
+
+                                <a href="#">
+                                    Share
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container extra-offset my-3">
+                <div class="card text-center">
+                    <div class="card-img px-2">
+                        <img src="img/thot4.jpg" class="mx-auto mt-2">
+                    </div>
+
+                    <div class="container nested-card mx-auto">
+                        <div class="mt-2">
+                            <div class="card-tags d-none d-sm-block text-left">
+                                <h5>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                    <a href="#"><span class="badge badge-danger badge-pill">
+                                        Horror
+                                        </span></a>
+                                </h5>
+                            </div>
+                            <h3 class="card-title mt-3">Lorem Ipsum</h3>
+                            <p class="card-text">hdsjkdhsjak hds hskds dhsjd hsjdh sd</p>
+                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">
+                                <span>
+                                    <a href="#">
+                                        <i class="fa fa-arrow-up fa-lg"></i>
+                                    </a>
+                                    12.3K
+                                    <a href="#">
+                                        <i class="fa fa-arrow-down fa-lg"></i>
+                                    </a>
+                                </span>
+
+                                <a href="#">
+                                    Comments
+                                    <i class="fa fa-comment fa-lg"></i>
+                                </a>
+
+                                <a href="#">
+                                    Share
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Post item end-->
+
+        <!-- Bootstrap js -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

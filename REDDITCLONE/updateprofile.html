@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Example Title</title>
+        <meta name="author" content="Your Name">
+        <meta name="description" content="Example description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel=stylesheet href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-social.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel=stylesheet href="css/root.css">
+        <link rel=stylesheet href="css/createpost.css">
+
+    </head>
+
+    <body>
+
+
+
+        <div class="container my-5">
+            <h1 class="modaltitle">Update Profile</h1>
+        </div>
+
+
+
+        <div class="container">
+            <form method="post" action="#">
+<!--
+                <div class="row form-group">                    
+                    <div class="col-12">
+                        <label for="title">Blog Title</label>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Enter the title for your Blog" id="title" name="title" required>
+                    </div>                    
+                </div>
+-->
+
+                <div class="row form-group">                  
+                    <div class="col-12">
+                        <label for="image">Profile Image</label>
+                    </div>
+                    <div class="col-12">
+                        <input type="file" class="form-control-file custom-file" placeholder="Pick an Image for your Profile" id="image" name="image" accept="image/jpeg, image/png, image/gif">
+                    </div>
+
+                    <div class="col-12">
+                        <img class="mx-0 px-0" src="" id="imgdisplay">
+                    </div>
+                </div>
+
+                <div class="row form-group">                    
+                    <div class="col-12">
+                        <label for="content">Profile Bio</label>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Write here" id="content" rows=5 id="content" name="content"></textarea>
+                    </div>                    
+                </div>
+
+<!--
+                <div class="row form-check form-check-inline">                    
+                    <div class="col-12">
+                        <label for="tags">Tags</label>
+                    </div>
+                    <div class="col-12 tags">
+                        <a class="btn m-1 my-2" id="nsfw"><i class="fa fa-plus mr-1"></i>NSFW</a>
+                        <a class="btn m-1 my-2" id="horror"><i class="fa fa-plus mr-1"></i>Horror</a>
+                        <a class="btn m-1 my-2" id="sad"><i class="fa fa-plus mr-1"></i>Sad</a>
+                        <a class="btn m-1 my-2" id="happy"><i class="fa fa-plus mr-1"></i>Happy</a>
+                        <a class="btn m-1 my-2" id="love"><i class="fa fa-plus mr-1"></i>Love</a>
+                        <a class="btn m-1 my-2" id="cute"><i class="fa fa-plus mr-1"></i>Cute</a>
+                    </div>
+                </div>
+                
+                <div class="d-none">
+                    <input type="checkbox" name="nsfw">
+                    <input type="checkbox" name="horror">
+                    <input type="checkbox" name="sad">
+                    <input type="checkbox" name="happy">
+                    <input type="checkbox" name="love">
+                    <input type="checkbox" name="cute">
+                </div>
+-->
+
+                <div class="row ml-1">
+                    <div class="submit-div col-4 col-md-3 col-lg-2 my-5 p-0">
+                        <button disabled class="btn" type="submit" name="submit" id="submit">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/tilt.js"></script>
+    </body>
+
+</html>

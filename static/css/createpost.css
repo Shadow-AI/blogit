@@ -1,0 +1,61 @@
+body{
+    color: var(--light-font);
+}
+
+img{
+    max-width: inherit;
+    /*    max-height: 300px;*/
+    overflow-x: hidden;
+}
+
+#nsfw, #horror, #sad, #happy, #love, #cute{
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+#nsfw:hover, #horror:hover, #sad:hover, #happy:hover, #love:hover, #cute:hover{
+    opacity: .85;
+    transform: translateY(2px);    
+}
+
+.submit-div{
+/*
+    border: 2px solid white;
+    border-radius: 5px;
+*/
+}
+
+.submit-div:hover, .submit-div:focus{
+    box-shadow: 0 .8rem 10px -10px var(--post-info);
+    transition: all .7s;
+    transform: translateY(-5px);
+}
+
+button[name="submit"]{
+/*    margin: 30px 0px 40px 20px;*/
+    width: inherit;
+    background: transparent;
+    color: var(--light-font);
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+button[name="submit"]:hover, button[name="submit"]:focus{
+    background: transparent;
+    color: var(--light-font);
+    font-weight: 650;
+/*    border: 2px solid white;*/
+    transition: all .7s;
+    box-shadow: inset 0rem -2.2rem var(--dark-pink);
+    border: 2px solid #15f4ee;
+}
+
+button[disabled]:hover{
+    background: transparent;
+    color: var(--light-font);
+    font-weight: normal;
+    transition: all .7s;
+    box-shadow: none;
+}
+

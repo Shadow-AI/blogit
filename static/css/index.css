@@ -1,0 +1,156 @@
+.navbar.bg-dark{
+    background-color: var(--navbar) !important;   
+}
+
+.nav-item > a > img{
+    /*profile icon*/
+    border-radius: 16px;
+}
+
+#loginnav{
+    border-radius: 10px;
+    background-color: var(--dark-pink);
+    border: 2px solid var(--dark-pink);
+    border-radius: 10px;
+    width: 95px;
+    color: var(--navbar);
+    font-weight: 650;
+}
+
+#registernav{
+    border: 2px solid var(--dark-pink);
+    border-radius: 10px;
+    background-color: transparent;    
+    width: 95px;
+    color: var(--dark-pink);
+    font-weight: 650;
+}
+
+.form-inline > .form-control{
+    /*search bar*/
+    width: 35vw;
+}
+
+/*THIS IS FOR THE FORM BUTTON*/
+.btn-outline{
+    border: 1px solid var(--dark-red);
+    color: var(--dark-red);
+}
+
+.btn-outline:hover{
+    background: var(--dark-red);
+    color: white;
+}
+
+.extra-offset {
+    height: 600px;
+}
+
+/*animation of all objects*/
+.extra-offset, .card-img, .nested-card{
+    transition: var(--anim-time);
+}
+
+.all-posts:first-of-type(div){
+    margin-top: 50px;
+}
+
+
+.card {
+    height: 450px;
+    position: relative;
+    border-radius: 15px;
+    background: transparent;
+}
+
+.nested-card {
+    height: 200px;
+    position: absolute;
+    bottom: -75px;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 25px;
+    /*border: 2px solid black;*/
+    background: var(--post-info);
+    animation: fadein ease var(--anim-time);
+    /*    box-shadow: 5px 5px 15px var(--blue-violet);*/
+}
+
+.card .card-img img{
+    border: 10px solid white;
+    background: var(--rich-black);
+    max-height: 400px;
+    border-radius: 15px;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.card-text{
+    height: 70px;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.post-control{
+    position: relative;
+    bottom:0;
+}
+
+.card-img:hover{
+    transform: scale(1.15);
+    
+}
+
+/*this is for only displaying image on hover*/
+.card-img:hover + .nested-card{
+    animation: fadeout ease var(--anim-time);
+    visibility: collapse;    
+}
+
+a, a:hover {
+    color: inherit;
+}
+
+.modal{
+    position: absolute;
+    top: 25vh;
+    
+}
+
+
+
+
+/*MEDIA QUERIES HERE*/
+
+@media only screen and (min-width:576px) and (max-width:767px){
+    .extra-offset{
+        height: 450px;
+    }
+    .card{
+        height: 350px;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width:575px){
+    .extra-offset{
+        height: 350px;
+    }
+    .card{
+        height: 275px;
+    }
+    .nested-card{
+        height: 125px;
+        bottom: 0px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 424px){
+    .extra-offset{
+        height: 300px;
+    }
+    .nested-card{
+        height: 150px;
+    }
+    .card{
+        height: 225px;
+    }
+}

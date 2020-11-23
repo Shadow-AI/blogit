@@ -1,0 +1,129 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}Create a New Post{% endblock %}
+{% block head %}<link rel=stylesheet href="{% static 'css/createpost.css' %}">{% endblock %}
+
+    {% block body %}
+
+        <div class="container my-5">
+            <h1 class="modaltitle">Create a Post</h1>
+        </div>
+
+
+
+        <div class="container">
+            <form method="post" action="{% url 'blog:create_post' %}" id="createPost" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row form-group">                    
+                    <div class="col-12">
+                        <label for="title">Blog Title</label>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Enter the title for your Blog" id="title" name="title" required>
+                    </div>                    
+                </div>
+
+                <div class="row form-group">                  
+                    <div class="col-12">
+                        <label for="image">Blog Image</label>
+                    </div>
+                    <div class="col-12">
+                        <input type="file" class="form-control-file custom-file" placeholder="Pick an Image for your Blog" id="image" name="image" accept="image/jpeg, image/png, image/gif" required>
+                    </div>
+
+                    <div class="col-12">
+                        <img class="mx-0 px-0" src="" id="imgdisplay">
+                    </div>
+                </div>
+
+                <div class="row form-group">                    
+                    <div class="col-12">
+                        <label for="content">Blog Content</label>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Write here" id="content" rows=15 id="content" name="content" required></textarea>
+                    </div>                    
+                </div>
+
+                <div class="row form-check form-check-inline">                    
+                    <div class="col-12">
+                        <label for="tags">Tags</label>
+                    </div>
+                    <div class="col-12 tags">
+                        <a class="btn m-1 my-2" id="nsfw"><i class="fa fa-plus mr-1"></i>NSFW</a>
+                        <a class="btn m-1 my-2" id="horror"><i class="fa fa-plus mr-1"></i>Horror</a>
+                        <a class="btn m-1 my-2" id="sad"><i class="fa fa-plus mr-1"></i>Sad</a>
+                        <a class="btn m-1 my-2" id="happy"><i class="fa fa-plus mr-1"></i>Happy</a>
+                        <a class="btn m-1 my-2" id="love"><i class="fa fa-plus mr-1"></i>Love</a>
+                        <a class="btn m-1 my-2" id="cute"><i class="fa fa-plus mr-1"></i>Cute</a>
+                    </div>
+                </div>
+                
+                <div class="d-none">
+                    <input type="checkbox" name="nsfw" id="nsfwA">
+                    <input type="checkbox" name="horror" id="horrorA">
+                    <input type="checkbox" name="sad" id="sadA">
+                    <input type="checkbox" name="happy" id="happyA">
+                    <input type="checkbox" name="love" id="loveA">
+                    <input type="checkbox" name="cute" id="cuteA">
+                </div>
+
+                <div class="row ml-1">
+                    <div class="submit-div col-4 col-md-3 col-lg-2 my-5 p-0">
+                        <button disabled class="btn" type="submit" name="submit" id="submit">
+                            Post
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+{#    <script>#}
+{##}
+{#        var imagename = null;#}
+{#        $(document).on('submit', "#image", (e)=>{#}
+{#            e.preventDefault();#}
+{#            imagename=e.target.files[0];#}
+{#            console.log(imagename);#}
+{#        });#}
+{##}
+{#        $(document).on("submit", "#createPost", async(e)=>{#}
+{#            e.preventDefault();#}
+{#            let fileinput = $("#image");#}
+{##}
+{##}
+            {#let file = fileinput.files[0];#}
+{#            let file = e.target.files[0];#}
+{#            console.log(file);#}
+{#            let formdata = new FormData();#}
+{#            formdata.append('fileImage', file, file.name);#}
+{#            formdata.append('postTitle', $("#title").val());#}
+{#            formdata.append('image', formdata);#}
+{#            formdata.append('Content', $("#content").val());#}
+{#            formdata.append('NSFW', $("#nsfwA").val());#}
+{#            formdata.append('Horror', $("#horrorA").val());#}
+{#            formdata.append('Sad', $("#sadA").val());#}
+{#            formdata.append('Happy', $("#happyA").val());#}
+{#            formdata.append('Love', $("#loveA").val());#}
+{#            formdata.append('Cute', $("#cuteA").val());#}
+{#            formdata.append('csrfmiddlewaretoken', $('input[name=csrfmiddlewaretoken]').val());#}
+{#            console.log(formdata);#}
+{#            let result = await $.ajax({#}
+{#                type: 'POST',#}
+{#                url: '/createpost/',#}
+{#                data: formdata,#}
+{#                success: function (data, status, xhttp){#}
+{#                    console.log(data);#}
+{#                }#}
+{#            })#}
+{#        });#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#    </script>#}
+{% endblock %}
+
+{% block foot_script %}<script src="{% static 'js/createpost.js' %}"></script>{% endblock %}

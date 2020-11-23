@@ -1,0 +1,60 @@
+body{
+    color: var(--light-font);
+}
+
+#profpic{
+    width: 100%;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color:inherit;
+}
+a:hover{
+    color: var(--dark-pink);
+    text-decoration: none;
+}
+
+.clipper{
+    transition: all 1s;
+    padding: 0;
+    clip-path: circle(35%);
+/*    clip-path: polygon(, 0 0, 0 100%, 69% 100%, 100% 0, );*/
+}
+
+.clipper:hover{
+    clip-path: circle(55%);    
+}
+
+.col-12 .my-4  h1{
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+/*Those parts are for post display*/
+.postcard{
+    background: var(--post-info);
+    /*this width sets width of image*/
+/*    width: inherit;*/
+    height: 300px;
+    transition: all .4s;
+    
+    border-radius: 50px;
+    box-shadow: 15px 15px 15px 0 var(--rich-black);
+}
+
+img.position-absolute{
+    width: inherit;
+    z-index: -1;
+}
+
+.postcard:hover img.position-absolute{
+    transition: all .4s;
+    z-index: 0;
+}
+.postcard:hover h3.text-center{
+    transition: all .4s;
+    z-index: -1;
+}

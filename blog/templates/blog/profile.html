@@ -1,0 +1,131 @@
+{% extends 'blog/base.html' %}
+{% load humanize %}
+{% load static %}
+{% block title %}{{ user.username }}'s Profile{% endblock %}
+{% block head %}<link rel=stylesheet href="{% static 'css/profile.css' %}">{% endblock %}
+{% block body %}
+                
+        <div class="container topcontainer">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="clipper">
+                        {% if userbio.pfp %}
+                            <img id="profpic" src="{{ userbio.pfp.url }}">
+                        {% else %}
+                            <img id="profpic" src="/media/user_images/defa.jpg">
+                        {% endif %}
+
+                    </div>
+                    <div class="user-profile mb-5">
+                        <div class="d-flex justify-content-center mb-3">
+                            <h1>{{ user.username }}</h1><br>
+                            <h4>{{ user.firstname }} {{ user.lastname }}</h4>
+
+                        </div>
+
+                        <div class="text-center">
+                            {% if userbio.bio %}
+                            {{ userbio.bio | linebreaks }}
+                            {% else %}
+                                There is no UserBio for this user<br>Give them some time to set their profile!
+                            {% endif %}
+
+                        </div>
+                        <div class="row float-right">
+                            {% if request.user.is_authenticated and request.user == user %}
+                            <a class="btn btn-primary" href="{% url 'blog:update_profile' user.id %}">Edit</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                    <div class="my-4">
+                        <h1 class="text-center">{{ posts.count }}</h1>
+                        <h5 class="text-center">Posts</h5>
+                    </div>
+                    <div class="my-4">
+                        <h1>
+                            {{ last_online | naturaltime }}
+                        </h1>
+                        <h5 class="text-center">Last Online</h5>
+                    </div>
+                    <div class="my-4">
+                        {% if not latest is None %}
+                            <a href="{% url 'blog:view_post' latest.postID %}">
+
+                            <h1>{{ latest.postTitle }}</h1>
+                            <h5 class="text-center">Latest Blog</h5>
+                                {% else %}
+                            <h2>User has no posts!</h2>
+                        {% endif %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h3>{{ user.username }}'s Posts</h3>
+
+<!--            Posts-->
+            <div class="row">
+
+            {% if not posts.count == 0 %}
+
+                {% for p in posts %}
+
+                <div class="col-12 col-md-6 col-lg-4 my-3">
+                    <a href="{% url 'blog:view_post' p.postID %}" class="d-block">
+                        <div class="d-flex postcard justify-content-center align-items-center overflow-hidden position-relative">
+                            <h3 class="text-center">{{ p.postTitle }}</h3>
+                            <img class="position-absolute" src="{{ p.image.url }}">
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+                <div class="col-12 col-md-6 col-lg-4 my-3">
+                There are no posts to display
+                </div>
+            {% endif %}
+
+
+{#                <div class="col-12 col-md-6 col-lg-4 my-3">#}
+{#                    <a href="blogpost.html" class="d-block">#}
+{#                        <div class="d-flex postcard justify-content-center align-items-center overflow-hidden position-relative">#}
+{#                            <h3 class="text-center">A Cat's Life</h3>#}
+{#                            <img class="position-absolute" src="funimg/thot1.jpg">#}
+{#                        </div>#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-12 col-md-6 col-lg-4 my-3">#}
+{#                    <a href="blogpost.html" class="d-block">#}
+{#                        <div class="d-flex postcard justify-content-center align-items-center overflow-hidden position-relative">#}
+{#                            <h3 class="text-center">A Cat's Life</h3>#}
+{#                            <img class="position-absolute" src="funimg/thot1.jpg">#}
+{#                        </div>#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-12 col-md-6 col-lg-4 my-3">#}
+{#                    <a href="blogpost.html" class="d-block">#}
+{#                        <div class="d-flex postcard justify-content-center align-items-center overflow-hidden position-relative">#}
+{#                            <h3 class="text-center">A Cat's Life</h3>#}
+{#                            <img class="position-absolute" src="funimg/thot1.jpg">#}
+{#                        </div>#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-12 col-md-6 col-lg-4 my-3">#}
+{#                    <a href="blogpost.html" class="d-block">#}
+{#                        <div class="d-flex postcard justify-content-center align-items-center overflow-hidden position-relative">#}
+{#                            <h3 class="text-center">A Cat's Life</h3>#}
+{#                            <img class="position-absolute" src="funimg/thot1.jpg">#}
+{#                        </div>#}
+{#                    </a>#}
+{#                </div>#}
+
+
+            </div>
+        </div>
+{% endblock %}
+
+
+{% block foot_script %}<script src="{% static 'js/profile.js' %}"></script>{% endblock %}
