@@ -53,7 +53,7 @@
                         {% if not latest is None %}
                             <a href="{% url 'blog:view_post' latest.postID %}">
 
-                            <h1>{{ latest.postTitle }}</h1>
+                            <h1 class="text-center">{{ latest.postTitle }}</h1>
                             <h5 class="text-center">Latest Blog</h5>
                                 {% else %}
                             <h2>User has no posts!</h2>
