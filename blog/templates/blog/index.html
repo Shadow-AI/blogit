@@ -40,7 +40,7 @@
                                 </h5>
                             </div>
                             <h3 class="card-title mt-3">{{ post.postTitle | title }}</h3>
-                            <p class="card-text">{{ post.content |truncatewords_html:20 }}</p>
+                            <p class="card-text">{{ post.content | linebreaksbr |truncatewords_html:20 }}</p>
 {#                            <div class="text-left justify-content-between mx-3 d-none d-sm-flex post-control">#}
 {#                                <span>#}
 {#                                    <a href="#">#}
