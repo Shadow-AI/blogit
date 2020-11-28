@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e1cbfa1-e3be-4600-9127-e8803ae8f354" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,12 +100,25 @@
       <workItem from="1606560782660" duration="90000" />
       <workItem from="1606566673588" duration="86000" />
       <workItem from="1606566803015" duration="65000" />
-      <workItem from="1606573672567" duration="527000" />
+      <workItem from="1606573672567" duration="943000" />
+      <workItem from="1606574635081" duration="227000" />
     </task>
+    <task id="LOCAL-00001" summary="uwu">
+      <created>1606574432811</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606574432811</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uwu" />
+    <option name="LAST_COMMIT_MESSAGE" value="uwu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605448359000">
@@ -119,6 +129,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="981" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601489504817" />
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1606574431577">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606574431577" />
     <state x="990" y="240" key="FileChooserDialogImpl" timestamp="1605191513424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
