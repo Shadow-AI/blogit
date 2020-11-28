@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e1cbfa1-e3be-4600-9127-e8803ae8f354" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager">
     <configuration name="blogit" type="Python.DjangoServer" factoryName="Django server">
@@ -98,6 +101,9 @@
       <workItem from="1606512762004" duration="52000" />
       <workItem from="1606513066056" duration="14000" />
       <workItem from="1606560782660" duration="90000" />
+      <workItem from="1606566673588" duration="86000" />
+      <workItem from="1606566803015" duration="65000" />
+      <workItem from="1606573672567" duration="527000" />
     </task>
     <servers />
   </component>
@@ -117,10 +123,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="990" y="240" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605191513424" />
-    <state x="922" y="135" key="SettingsEditor" timestamp="1605971981922">
+    <state x="922" y="135" key="SettingsEditor" timestamp="1606574203769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="135" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605971981922" />
+    <state x="922" y="135" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606574203769" />
     <state x="929" y="324" key="com.intellij.ide.util.TipDialog" timestamp="1605190582615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

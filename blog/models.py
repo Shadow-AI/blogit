@@ -15,8 +15,6 @@ class Post(models.Model):
     postTitle = models.CharField(max_length=100)
     content = models.TextField(max_length=20000)
     image = models.ImageField(upload_to='post_images/')
-    # image_path = models.CharField(max_length=500)
-    # tag = models.ForeignKey(Tag, null=True, on_delete=models.DO_NOTHING)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
